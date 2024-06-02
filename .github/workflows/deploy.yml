@@ -57,4 +57,4 @@ jobs:
     - name: Docker run
       run: |
         sudo docker stop devops-koreatech && sudo docker rm devops-koreatech && sudo docker rmi ${{ secrets.DOCKER_USERNAME }}/devops-koreatech:latest
-        sudo docker run -d -p 80:8080 --name devops-koreatech --restart always ${{ secrets.DOCKER_USERNAME }}/devops-koreatech:latest
+        sudo docker run -d -p 8080:8080 --name devops-koreatech --restart always ${{ secrets.DOCKER_USERNAME }}/devops-koreatech:latest
